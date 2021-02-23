@@ -4,6 +4,7 @@
  * Mock class for test Class ClosedCaseCalloutTest
  */
 public class ClosedCaseCalloutMock{
+    //Method is to mock the success response, which generates the Key and success flag as true
     public class MockHttpSuccessResponseGenerator implements HttpCallOutMock {
         public HTTPResponse respond(HTTPRequest request){
             HttpResponse response = new HttpResponse();
@@ -14,6 +15,7 @@ public class ClosedCaseCalloutMock{
         }
             
     }
+    //Method is to mock the failure response, which generates the error message if any and success flag as false
     public class MockHttpFailureResponseGenerator implements HttpCallOutMock {
         public HTTPResponse respond(HTTPRequest request){
             HttpResponse response = new HttpResponse();
